@@ -5,7 +5,6 @@ def HTTP_PORT = getHTTPPort(env.BRANCH_NAME)
 def EMAIL_RECIPIENTS = "cipahraoul@yahoo.fr"
 
 node {
-    try{
         stage('initialize') {
                     def dockerHome = tool 'DockerLatest'
                     def mavenHome = tool 'MavenLatest'
@@ -40,5 +39,4 @@ node {
 //             imagePrune(CONTAINER_NAME)
 //       }
 
-    }
- }
+}
